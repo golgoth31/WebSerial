@@ -2,7 +2,7 @@
 
 WebSerialClass WebSerial;
 
-void WebSerialClass::begin(AsyncWebServer *server, const char *url = "/webserial")
+void WebSerialClass::begin(AsyncWebServer *server, const char *url)
 {
   _server = server;
   _ws = new AsyncWebSocket("/webserialws");
@@ -53,7 +53,7 @@ void WebSerialClass::msgCallback(RecvMsgHandler _recv)
 
 // Print
 
-void WebSerialClass::print(String m = "")
+void WebSerialClass::print(String m)
 {
   _ws->textAll(m);
 }
@@ -100,7 +100,7 @@ void WebSerialClass::print(float m)
 
 // Print with New Line
 
-void WebSerialClass::println(String m = "")
+void WebSerialClass::println(String m)
 {
   _ws->textAll(m + "\n");
 }

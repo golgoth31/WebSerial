@@ -81,5 +81,5 @@ private:
 #endif
 };
 
-WebSerialClass WebSerial;
+extern WebSerialClass WebSerial;
 #endif
